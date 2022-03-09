@@ -2,7 +2,9 @@
   "name": "nx-sandbox",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build": "nx build second"
+  },
   "private": true,
   "dependencies": {
     "tslib": "^2.0.0"
