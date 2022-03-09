@@ -1,0 +1,32 @@
+{
+  "root": "packages/second",
+  "sourceRoot": "packages/second/src",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/second",
+        "main": "packages/second/src/index.ts",
+        "tsConfig": "packages/second/tsconfig.lib.json",
+        "assets": ["packages/second/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/second/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/second"],
+      "options": {
+        "jestConfig": "packages/second/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

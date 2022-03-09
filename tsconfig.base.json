@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@nx-sandbox/first": ["packages/first/src/index.ts"],
+      "@nx-testing/second": ["packages/second/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
